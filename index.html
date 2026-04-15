@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <title>e-document-SUH-69</title> 
-  <!-- 2. ใส่รูปโลโก้ตรงนี้ (ระบุชื่อไฟล์รูปให้ตรงกับที่คุณอัปโหลดไป) -->
-  <link rel="icon" type="image/png" href="logo.png">
-    <base target="_top">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เว็บแอป</title>
+    <base target="_top">
+    <!-- 1. ชื่อเว็บ (แก้ไม่ให้ซ้ำแล้ว) -->
+    <title>e-document-SUH-69</title> 
+    <!-- 2. รูปโลโก้ (อย่าลืมอัปโหลดไฟล์ logo.png เข้า Github ด้วยนะครับ) -->
+    <link rel="icon" type="image/png" href="logo.png">
+    <!-- 3. เพิ่ม CSS เพื่อลบขอบขาวและทำให้ iframe เต็มจอพอดี -->
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* ซ่อน Scrollbar ของหน้าหลัก ป้องกัน Scrollbar ซ้อนกัน */
+            background-color: #f8f9fc; /* ใส่สีพื้นหลังเผื่อโหลดช้า (สีเดียวกับขอบเว็บคุณ) */
+        }
+
+        iframe {
+            display: block; /* ป้องกันช่องว่างแปลกๆ ด้านล่าง iframe */
+            width: 100vw;   /* กว้างเต็มจอพอดี */
+            height: 100vh;  /* สูงเต็มจอพอดี */
+            border: none;   /* ลบเส้นขอบ */
+        }
+    </style>
 </head>
 <body>
-    <iframe style="width: 100%; height: 100vh;" scrolling="yes" src="https://script.google.com/macros/s/AKfycbzo_fKbyyM6nMa0Vm_sVLKG2jpzecSmBn1tJEUVV2UZv-d18tynTt_HlbdFenOC17om/exec" frameborder="0"></iframe>
+    <!-- ดึง App Script มาแสดง -->
+    <iframe scrolling="yes" src="https://script.google.com/macros/s/AKfycbzo_fKbyyM6nMa0Vm_sVLKG2jpzecSmBn1tJEUVV2UZv-d18tynTt_HlbdFenOC17om/exec"></iframe>
 </body>
 </html>
